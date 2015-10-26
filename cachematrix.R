@@ -2,11 +2,11 @@
 ## functions do
 
 ## Write a short comment describing this function
-
+##this function caches the inverse of a matrix and stores it
 makeCacheMatrix <- function(x = matrix()) {
        b <- NULL
        set <- function(y) {
-             x <<- y
+             x <<- y        ##assigns value to object
              b <<- NULL
          }
        get <- function() x
@@ -23,8 +23,8 @@ makeCacheMatrix <- function(x = matrix()) {
 ## Write a short comment describing this function
 
 cacheSolve <-function(x, ...) {
-              b <- x$getinverse()
-              if(!is.null(b)) {
+              b <- x$getinverse()   ##checks to see if inverse exists in cache
+              if(!is.null(b)) {      ##if not, it will calculate it
                       message("loading cached data")
                       return(b)
                   }
@@ -34,7 +34,8 @@ cacheSolve <-function(x, ...) {
             b
 }
 
-
-        ## Return a matrix that is the inverse of 'x'
+       
+        
+        ##using solve function gives us inverse matrix 
 }
 
